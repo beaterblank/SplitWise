@@ -14,6 +14,13 @@ Install pipenv on your local system
 Activate the env and install dependencies by:
 
 `pipenv shell`
+`pipenv sync`
+
+Install firebase cli tools optionally by:
+
+Linux/mac - `curl -sL https://firebase.tools | bash`
+Windows   - refer this link https://firebase.google.com/docs/cli
+
 
 Run the app with
 
