@@ -22,6 +22,6 @@ Linux/mac - `curl -sL https://firebase.tools | bash`
 Windows   - refer this link https://firebase.google.com/docs/cli
 
 
-Run the app with
+Run the from the directory app/
 
-`python3 app/main.py`
+`python3 wise_split.py`

@@ -1,11 +1,13 @@
 FROM python:3.9
 
-WORKDIR /app
+COPY ./requirements.txt /WiseSplit/requirements.txt
 
-COPY ./requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /WiseSplit/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+COPY ./app /WiseSplit/app/
 
-COPY ./app .
+COPY ./secrets /WiseSplit/app/secrets/
 
-CMD ["python","main.py"]
+WORKDIR /WiseSplit/app/
+
+CMD ["python","wise_split.py"]
